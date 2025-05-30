@@ -55,7 +55,7 @@ android {
     signingConfigs {
         release {
             storeFile file("../release.keystore")
-            storePassword "uiautomator-release-2015"
+            storePassword "uiautomator"
             keyAlias "uiautomator"
             keyPassword "uiautomator"
         }
