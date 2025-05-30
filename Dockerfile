@@ -29,11 +29,11 @@ WORKDIR /app
 # Copy project files
 COPY . .
 
-RUN chmod +x gradlew && ./gradlew --quiet androidGitVersion
+RUN chmod +x gradlew
 
 # Build APKs
-RUN ./gradlew build
-RUN ./gradlew packageDebugAndroidTest
+RUN ./gradlew build --no-watch-fs
+RUN ./gradlew packageDebugAndroidTest --no-watch-fs
 
 # Create dist directory and copy APKs
 RUN mkdir -p /output/dist && \
