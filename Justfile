@@ -4,6 +4,7 @@ app_name := "com.github.uiautomator"
 server_name := "com.github.uiautomator.test"
 
 build: 
+    ./gradlew clean
     ./gradlew build
     ./gradlew packageDebugAndroidTest
     
