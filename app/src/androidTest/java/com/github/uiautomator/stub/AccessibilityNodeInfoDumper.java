@@ -59,7 +59,7 @@ class AccessibilityNodeInfoDumper {
     static AccessibilityNodeInfo[] getWindowRoots(UiDevice device) {
         device.waitForIdle();
 
-        Set<AccessibilityNodeInfo> roots = new HashSet<>();
+        ArrayList<AccessibilityNodeInfo> roots = new ArrayList<>();
         UiAutomation uiAutomation = InstrumentationRegistry.getInstrumentation().getUiAutomation();
 
         // Ensure the active window root is included.
